@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACM
 {
-    class Order
+    public class Order
     {
         public Order()
         {
