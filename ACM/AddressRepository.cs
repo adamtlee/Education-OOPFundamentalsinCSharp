@@ -38,9 +38,11 @@ namespace ACM
                 Country = "United States",
                 PostalCode = "7777"
             };
+            addressList.Add(address);
+
             address = new Address(2)
             {
-                AddressType = 1,
+                AddressType = 2,
                 StreetLine1 = "Klenwood",
                 StreetLine2 = "Klenmwood Ct.",
                 City = "Kenver",
