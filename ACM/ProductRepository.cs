@@ -19,6 +19,9 @@ namespace ACM
                 product.CurrentPrice = 24.65M;
             }
 
+            Object myObject = new Object();
+            Console.WriteLine($"Object: {myObject.ToString()}");
+            Console.WriteLine($"Product: {product.ToString()}");
             return product;
 
         }
