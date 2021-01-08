@@ -22,6 +22,7 @@ namespace ACM
         public string ProductDescription { get; set; }
         public decimal? CurrentPrice { get; set; }
 
+        public override string ToString() => ProductName;
         public bool Validate()
         {
             var isValid = true;

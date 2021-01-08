@@ -57,6 +57,7 @@ namespace ACM.BL
             }
         }
 
+        public override string ToString() => FullName;
         public bool Validate()
         {
             var isValid = true;
