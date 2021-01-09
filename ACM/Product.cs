@@ -35,6 +35,9 @@ namespace ACM
             }
         }
 
+        public string Log() =>
+           $"{ProductId}: {ProductName} Email: {ProductDescription} Status: {EntityState.ToString()}";
+
         public override string ToString() => ProductName;
         public override bool Validate()
         {
