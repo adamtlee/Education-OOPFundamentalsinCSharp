@@ -28,7 +28,28 @@ namespace ACM
 
         public bool Save(Product product)
         {
-            return true;
+            var success = true;
+
+            if (product.HasChanges)
+            {
+                if (product.IsValid)
+                {
+                    if (product.IsNew)
+                    {
+                        // Called an insert stored procedure
+                    }
+                    else
+                    {
+                        // Call an updated stored procedure
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+
+            return success;
         }
     } 
 }

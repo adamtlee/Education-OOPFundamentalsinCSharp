@@ -25,6 +25,39 @@ namespace ACM.BLTest
             Assert.AreEqual(expected.ProductDescription, actual.ProductDescription);
             Assert.AreEqual(expected.ProductName, actual.ProductName);
         }
-    }
-        
+
+        [TestMethod()]
+        public void SaveTestValid()
+        {
+            var productRepository = new ProductRepository();
+            var updatedProduct = new Product(2)
+            {
+                ProductName = "Candy",
+                ProductDescription = "Chocolate Candy",
+                CurrentPrice = 25M,
+                HasChanges = true
+            };
+
+            var actual = productRepository.Save(updatedProduct);
+
+            Assert.AreEqual(true, actual);
+        }
+
+        [TestMethod()]
+        public void SaveTestMissingPrice()
+        {
+            var productRepository = new ProductRepository();
+            var updatedProduct = new Product(2)
+            {
+                ProductName = "Candy",
+                ProductDescription = "Chocolate Candy",
+                CurrentPrice = null,
+                HasChanges = true
+            };
+
+            var actual = productRepository.Save(updatedProduct);
+
+            Assert.AreEqual(false, actual);
+        }
+    }    
 }
