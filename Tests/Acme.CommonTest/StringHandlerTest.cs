@@ -13,7 +13,7 @@ namespace Acme.CommonTest
             var source = "BobRoss";
             var expected = "Bob Ross";   
 
-            var actual = StringHandler.InsertSpaces(source);
+            var actual = source.InsertSpaces();
 
             Assert.AreEqual(expected, actual);
         }
@@ -24,7 +24,7 @@ namespace Acme.CommonTest
             var source = "Bob Ross";
             var expected = "Bob Ross";
 
-            var actual = StringHandler.InsertSpaces(source);
+            var actual = source.InsertSpaces();
 
             Assert.AreEqual(expected, actual);
         }
