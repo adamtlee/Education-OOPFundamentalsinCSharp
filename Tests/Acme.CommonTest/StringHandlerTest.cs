@@ -11,10 +11,9 @@ namespace Acme.CommonTest
         public void InsertSpacesTestValid()
         {
             var source = "BobRoss";
-            var expected = "Bob Ross";
-            var handler = new StringHandler();
+            var expected = "Bob Ross";   
 
-            var actual = handler.InsertSpaces(source);
+            var actual = StringHandler.InsertSpaces(source);
 
             Assert.AreEqual(expected, actual);
         }
@@ -24,9 +23,8 @@ namespace Acme.CommonTest
         {
             var source = "Bob Ross";
             var expected = "Bob Ross";
-            var handler = new StringHandler();
 
-            var actual = handler.InsertSpaces(source);
+            var actual = StringHandler.InsertSpaces(source);
 
             Assert.AreEqual(expected, actual);
         }
