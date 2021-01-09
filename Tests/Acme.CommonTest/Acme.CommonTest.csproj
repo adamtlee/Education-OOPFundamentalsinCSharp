@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LoggingServiceTest.cs" />
     <Compile Include="StringHandlerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -59,6 +60,10 @@
     <ProjectReference Include="..\..\Acme.Common\Acme.Common.csproj">
       <Project>{d3b2f54d-80b1-4b89-9b6f-0d92922004bc}</Project>
       <Name>Acme.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ACM\ACM.BL.csproj">
+      <Project>{89f2b398-1902-42b4-9e26-b7caff68fe99}</Project>
+      <Name>ACM.BL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
